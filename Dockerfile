@@ -13,6 +13,5 @@ RUN chmod +x /netease/UnblockNeteaseMusic \
 
 
 WORKDIR /netease
-EXPOSE ${TLS_PORT} $PORT
 
 CMD /netease/run.sh
