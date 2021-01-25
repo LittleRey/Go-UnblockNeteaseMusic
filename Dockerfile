@@ -16,6 +16,5 @@ RUN chmod +x /netease/UnblockNeteaseMusic \
     && chmod +x /netease/server.crt \
     && chmod +x /netease/server.key
 
-WORKDIR /netease
 
-CMD exec
+CMD /run.sh
