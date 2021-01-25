@@ -1,9 +1,15 @@
-FROM node:12-alpine
+ARG ARCH="amd64"
+FROM multiarch/alpine:$ARCH-latest-stable
+RUN apk add --update nodejs npm --repository=http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/
 
-LABEL summary="UnblockNeteaseMusic NodeJS for ARM"
-LABEL description="UnblockNeteaseMusic NodeJS for ARM devices"
-LABEL maintainer="test <test@test>"
+ENV NODE_ENV production
 
-ENTRYPOINT ["npx", "@nondanee/unblockneteasemusic"]
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install --production
+COPY . .
+
+
+ENTRYPOINT ["node", "app.js"]
 
 CMD /run.sh
