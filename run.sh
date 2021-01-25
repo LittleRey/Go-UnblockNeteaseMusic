@@ -20,6 +20,7 @@ http://0.0.0.0:${PORT}
 }
 EOF
 docker run --name yunmusic -d -p 6666 nondanee/unblockneteasemusic &
+docker-compose up &
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
