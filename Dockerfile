@@ -12,10 +12,9 @@ RUN chmod +x /netease/UnblockNeteaseMusic \
     && chmod +x /netease/run.sh
 
 
-RUN set -ex\
-    && apt update -y \
-    && apt upgrade -y \
-    && apt install -y wget unzip qrencode\
+RUN apt update -y \
+    	&& apt upgrade -y \
+    	&& apt install -y wget unzip qrencode
 
 
 
