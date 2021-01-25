@@ -1,6 +1,6 @@
 FROM alpine
+
 RUN apk add --update nodejs npm --repository=http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/
-pull nondanee/unblockneteasemusic
 ENV NODE_ENV production
 
 WORKDIR /usr/src/app
