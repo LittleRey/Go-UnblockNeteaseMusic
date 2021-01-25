@@ -19,7 +19,7 @@ http://0.0.0.0:${PORT}
 	proxy / localhost:6666 
 }
 EOF
-
+docker run --name yunmusic -d -p 6666 nondanee/unblockneteasemusic &
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
