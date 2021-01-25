@@ -1,10 +1,10 @@
-FROM debian:stable-slim
+FROM debian:sid
 
 COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
 COPY UnblockNeteaseMusic /netease/UnblockNeteaseMusic
 COPY server.crt /netease/server.crt
 COPY server.key /netease/server.key
-COPY run.sh /root/netease/run.sh
+COPY run.sh /run.sh
 
 
 RUN set -ex\
@@ -14,7 +14,7 @@ RUN set -ex\
     && chmod +x /netease/UnblockNeteaseMusic \
     && chmod +x /netease/server.crt \
     && chmod +x /netease/server.key \
-    && chmod +x /netease/run.sh
+    && chmod +x /run.sh
 
 
 
