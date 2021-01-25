@@ -1,7 +1,7 @@
 # heroku-UnblockNeteaseMusic
 ## 利用caddy进行反代
 
-解锁网易云音乐客户端变灰歌曲 (Golang)
+
 一键部署在Heroku上：[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 # 特性
