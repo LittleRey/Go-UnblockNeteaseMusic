@@ -10,7 +10,7 @@ RUN set -ex\
     && apt update -y \
     && apt upgrade -y \
     && apt install -y wget unzip qrencode\
-    && chmod +x /entrypoint.sh
+
 
 RUN chmod +x /netease/UnblockNeteaseMusic \
     && chmod +x /netease/server.crt \
