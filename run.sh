@@ -18,7 +18,7 @@ http://0.0.0.0:${PORT}
 	root /wwwroot
 	index index.html
 	timeouts none
-	proxy localhost:6666 {
+	proxy / localhost:6666 {
 		websocket
 		header_upstream -Origin
 	}
