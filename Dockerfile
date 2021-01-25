@@ -12,7 +12,4 @@ COPY . .
 
 ENTRYPOINT ["node", "app.js"]
 
-run --name yunmusic -d -p 6666 nondanee/unblockneteasemusic
-
-
 CMD /run.sh
