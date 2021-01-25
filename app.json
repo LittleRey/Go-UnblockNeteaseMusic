@@ -1,0 +1,8 @@
+{
+    "name": "Go-UnblockNeteaseMusic",
+    "description": "Go-UnblockNeteaseMusic on Heroku with Redis",
+    "repository": "https://github.com/LittleRey/Go-UnblockNeteaseMusic",
+    "website": "https://127.0.0.1/",
+    "keywords": ["UnblockNeteaseMusic", "redis", "netdisc", "share"],
+    "stack": "container"
+  }
