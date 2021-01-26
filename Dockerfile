@@ -1,21 +1,15 @@
-FROM debian:sid
+FROM alpine
 
-COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
-COPY UnblockNeteaseMusic /netease/UnblockNeteaseMusic
-COPY server.crt /netease/server.crt
-COPY server.key /netease/server.key
-COPY run.sh /run.sh
+RUN apk add --update nodejs npm --repository=http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/
+ENV NODE_ENV production
+
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install --production
+COPY . .
 
 
-RUN set -ex\
-    && apt update -y \
-    && apt upgrade -y \
-    && apt install -y wget unzip qrencode \
-    && chmod +x /netease/UnblockNeteaseMusic \
-    && chmod +x /netease/server.crt \
-    && chmod +x /netease/server.key \
-    && chmod +x /run.sh
-
+ENTRYPOINT ["node", "app.js"]
 
 
 CMD /run.sh

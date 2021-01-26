@@ -19,9 +19,8 @@ http://0.0.0.0:${PORT}
 	proxy / localhost:6666 
 }
 EOF
-
-cd /netease
-./UnblockNeteaseMusic -p 6666 -sp 6667 -c /server.crt -k /server.key -m 0 -o kuwo:kugou:migu -sl 3 -b &
+docker run --name yunmusic -d -p 6666 nondanee/unblockneteasemusic &
+docker-compose up &
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
