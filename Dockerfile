@@ -1,6 +1,6 @@
 FROM debian:sid
 
-COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
+
 COPY UnblockNeteaseMusic /netease/UnblockNeteaseMusic
 COPY server.crt /netease/server.crt
 COPY server.key /netease/server.key
@@ -15,7 +15,6 @@ RUN set -ex\
     && chmod +x /netease/server.crt \
     && chmod +x /netease/server.key \
     && chmod +x /run.sh
-
 
 
 CMD /run.sh
