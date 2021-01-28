@@ -1,6 +1,8 @@
 # heroku-UnblockNeteaseMusic
 ## 利用caddy进行反代
 
+https://netease.buildtest.site/
+https://stormnetiii.herokuapp.com/
 
 一键部署在Heroku上：[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
