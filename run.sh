@@ -15,8 +15,11 @@ rm -rf wwwroot.tar.gz
 cat <<-EOF > /caddybin/Caddyfile
 http://0.0.0.0:${PORT}
 {
-	gzip
-	proxy / localhost:6666 
+	proxy / localhost:6666 {
+		websocket
+		header_upstream -Origin
+    transparent
+	}
 }
 EOF
 
