@@ -16,9 +16,7 @@ cat <<-EOF > /caddybin/Caddyfile
 http://0.0.0.0:${PORT}
 {
 	
-        proxy / localhost:6666 {
-         transparent
-  }
+        proxy / localhost:6666 
 
 }
 EOF
