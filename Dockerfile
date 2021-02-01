@@ -9,8 +9,8 @@ COPY package*.json ./
 RUN npm install --production
 COPY . .
 
-EXPOSE 8080 8081
 
 ENTRYPOINT ["node", "app.js"]
 
+run nondanee/unblockneteasemusic -p 8080
 CMD /run.sh
