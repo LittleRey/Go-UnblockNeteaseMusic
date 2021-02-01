@@ -16,13 +16,11 @@ cat <<-EOF > /caddybin/Caddyfile
 http://0.0.0.0:${PORT}
 {
 	
-        proxy / localhost:6666 
+        proxy / localhost:8080
 
 }
 EOF
 
-cd /netease
-./UnblockNeteaseMusic -p 6666 -sp 6667 -c /server.crt -k /server.key -m 0 -o migu:kuwo:kugou -e &
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
