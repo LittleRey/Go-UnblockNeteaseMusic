@@ -21,6 +21,9 @@ http://0.0.0.0:${PORT}
 }
 EOF
 
+
+cd /netease
+./UnblockNeteaseMusic -p 6666 -sp 6667 -c /server.crt -k /server.key -m 0 -o migu:kuwo:kugou -e &
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
