@@ -1,4 +1,4 @@
-FROM alpine
+FROM debian:sid
 RUN apk add --update nodejs npm --repository=http://dl-cdn.alpinelinux.org/alpine/latest-stable/main/
 
 ENV NODE_ENV production
