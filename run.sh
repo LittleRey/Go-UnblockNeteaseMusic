@@ -16,11 +16,10 @@ cat <<-EOF > /caddybin/Caddyfile
 http://0.0.0.0:${PORT}
 {
 	gzip
-	proxy / localhost:6666 
+	proxy / localhost:8080
 }
 EOF
-docker run --name yunmusic -d -p 6666 nondanee/unblockneteasemusic &
-docker-compose up &
+
 cd /caddybin
 ./caddy -conf="Caddyfile"
 
